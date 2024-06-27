@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1cc2eb31.css",
+    "main.js": "/static/js/main.9f95b5d6.js",
+    "static/media/wildrefer.png": "/static/media/wildrefer.2bfe0c07bff8538ae676.png",
+    "static/media/master-rsch-proj.pdf": "/static/media/master-rsch-proj.f367b4c44d1b326d136f.pdf",
+    "static/media/self.jpg": "/static/media/self.6eefec62835ff4877078.jpg",
+    "static/media/wildrefer-teaser.png": "/static/media/wildrefer-teaser.0319185d8327d9ce7bc0.png",
+    "static/media/CV-ZhenxiangLin.pdf": "/static/media/CV-ZhenxiangLin.3f344cd29cb0441d25f2.pdf",
+    "static/media/master-rsch-proj.png": "/static/media/master-rsch-proj.a4e4ede56319a43ff64f.png",
+    "index.html": "/index.html",
+    "main.1cc2eb31.css.map": "/static/css/main.1cc2eb31.css.map",
+    "main.9f95b5d6.js.map": "/static/js/main.9f95b5d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cc2eb31.css",
+    "static/js/main.9f95b5d6.js"
+  ]
+}
