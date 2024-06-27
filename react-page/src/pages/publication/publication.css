@@ -1,0 +1,94 @@
+.publication-container {
+    padding: 50px 100px; /* 添加内边距，上下50像素，左右100像素 */
+}
+
+.publication-content {
+    display: flex; /* 使用flex布局 */
+    align-items: flex-start; /* 顶部对齐 */
+}
+
+.publication-photo {
+    margin-right: 20px; /* 图片右边距 */
+}
+
+.publication-photo img {
+    width: 100%; /* 图片宽度 */
+    max-width: 300px; /* 图片最大宽度 */
+    height: auto; /* 保持宽高比 */
+    display: block; /* 防止图片底部出现空白间隙 */
+}
+
+.publication-info {
+    flex: 1; /* 确保内容占据剩余空间 */
+}
+
+.paper-item {
+    margin-bottom: 20px; /* 论文项底部边距 */
+}
+
+.publication-title {
+    font-size: 18px; /* 标题字体大小 */
+    font-weight: bold; /* 标题字体加粗 */
+    margin-bottom: 10px; /* 标题底部边距 */
+}
+
+.publication-title a {
+    color: #1a73e8; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.publication-title a:hover {
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+.publication-authors {
+    font-size: 16px; /* 作者字体大小 */
+    margin-bottom: 10px; /* 作者底部边距 */
+}
+
+.publication-source {
+    font-size: 16px; /* 论文来源字体大小 */
+    margin-bottom: 10px; /* 论文来源底部边距 */
+}
+
+.publication-link {
+    font-size: 16px; /* 论文链接字体大小 */
+}
+
+.publication-link a {
+    color: #1a73e8; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.publication-link a:hover {
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+/* 响应式设计：当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    .publication-container {
+        padding: 20px; /* 减少内边距 */
+    }
+
+    .publication-content {
+        flex-direction: column; /* 改为垂直排列 */
+        align-items: center; /* 居中对齐 */
+    }
+
+    .publication-photo {
+        margin-right: 0; /* 移除右边距 */
+        margin-bottom: 20px; /* 添加底边距 */
+        width: 100%; /* 设置相对宽度，使其随屏幕宽度变化 */
+        max-width: 300px; /* 最大宽度为300px */
+    }
+
+    .publication-photo img {
+        width: 100%; /* 设置图片宽度为父元素的100% */
+        height: auto; /* 保持宽高比 */
+    }
+
+    .publication-info {
+        text-align: left; /* 左对齐文本 */
+        width: 100%; /* 使内容宽度为100% */
+    }
+}

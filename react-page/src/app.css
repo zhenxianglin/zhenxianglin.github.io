@@ -1,0 +1,17 @@
+.title {
+    padding: 0px 100px; /* 添加内边距，左右100像素 */
+    margin-bottom: 0px;
+    text-align: left; /* 左对齐标题 */
+}
+
+.title h2 {
+    font-size: 24px; /* 标题字体大小 */
+    font-weight: bold; /* 标题字体加粗 */
+    margin-bottom: 0px; /* 标题底部边距 */
+}
+
+@media (max-width: 768px) {
+    .title {
+        padding: 0px 20px; /* 减少内边距 */
+    }
+}

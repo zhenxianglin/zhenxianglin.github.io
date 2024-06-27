@@ -1,0 +1,151 @@
+/* 全局样式 */
+body {
+    padding-top: 80px; /* 为body添加80像素的上内边距，确保导航栏不遮挡页面内容 */
+    margin: 0; /* 移除默认外边距 */
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+}
+
+.navbar {
+    position: fixed; /* 固定导航栏在页面顶部，页面滚动时导航栏保持不动 */
+    top: 0; /* 导航栏距离页面顶部0像素 */
+    left: 0; /* 导航栏距离页面左边0像素 */
+    width: 100%; /* 导航栏宽度为100%，即占据整个页面宽度 */
+    display: flex; /* 使用flex布局，使子元素水平排列 */
+    justify-content: space-between; /* 子元素在主轴（水平轴）上的对齐方式，两端对齐 */
+    align-items: center; /* 子元素在交叉轴（垂直轴）上的对齐方式，居中对齐 */
+    padding: 20px 100px; /* 导航栏内边距，上下20像素，左右100像素，增加导航栏的高度和宽度 */
+    background-color: white; /* 导航栏背景颜色为白色，以便内容滚动时不被遮挡 */
+    z-index: 1000; /* 设置导航栏的堆叠顺序，确保其在其他内容之上 */
+    box-sizing: border-box; /* 使元素的总宽度包含内边距和边框宽度，确保导航栏尺寸按预期计算 */
+}
+
+.navbar::after {
+    content: ''; /* 伪元素内容为空 */
+    position: absolute; /* 绝对定位伪元素 */
+    bottom: 0; /* 伪元素位于导航栏底部 */
+    left: 0; /* 伪元素距离导航栏左边0像素 */
+    width: 100vw; /* 伪元素宽度为视口宽度，覆盖整个屏幕 */
+    height: 1px; /* 横线高度为1像素 */
+    background-color: #ddd; /* 横线颜色为浅灰色 */
+}
+
+.navbar-title {
+    font-size: 24px; /* 标题字体大小为24像素 */
+    font-weight: bold; /* 标题字体加粗 */
+}
+
+.navbar-title a {
+    text-decoration: none; /* 链接无下划线 */
+    color: black; /* 链接颜色为黑色 */
+}
+
+.navbar-title a:hover {
+    text-decoration: underline; /* 鼠标悬停在链接上时显示下划线 */
+}
+
+.navbar-title.active a {
+    color: black; /* 当链接处于活动状态时，颜色保持黑色 */
+    text-decoration: none; /* 无下划线 */
+}
+
+.navbar-links {
+    display: flex; /* 使用flex布局，使链接水平排列 */
+    gap: 20px; /* 链接之间的间距为20像素，使其间隔均匀 */
+}
+
+.navbar-links a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: black; /* 链接颜色为黑色 */
+    font-size: 18px; /* 链接字体大小为18像素 */
+    font-weight: 500; /* 链接字体粗细为500，属于中等粗细 */
+    transition: color 0.2s ease; /* 颜色变化的过渡效果，持续0.2秒，使用缓和过渡（ease），使颜色变化更平滑 */
+}
+
+.navbar-links a:hover {
+    color: #00bcd4; /* 鼠标悬停在链接上时，颜色变为浅蓝色，提供视觉反馈 */
+}
+
+/* 菜单图标样式 */
+.menu-icon {
+    display: none; /* 默认情况下隐藏 */
+    flex-direction: column; /* 使用flex布局，使子元素垂直排列 */
+    cursor: pointer; /* 鼠标悬停在图标上时显示手型光标 */
+    background-color: black; /* 背景颜色为黑色 */
+    padding: 10px; /* 内边距，增加点击区域 */
+    border-radius: 4px; /* 圆角边框 */
+    transform: scale(0.9); /* 缩小图标至原来的90% */
+}
+
+.menu-icon .bar {
+    width: 25px; /* 菜单图标的宽度 */
+    height: 3px; /* 菜单图标的高度 */
+    background-color: white; /* 菜单图标的颜色 */
+    margin: 2px 0; /* 菜单图标的间距 */
+}
+
+/* 定义下拉菜单项的动画效果 */
+@keyframes dropdownAnimation {
+    from {
+        opacity: 0; /* 起始状态透明度为0 */
+        transform: translateY(-10px); /* 起始状态向上偏移10像素 */
+    }
+    to {
+        opacity: 1; /* 结束状态透明度为1 */
+        transform: translateY(0); /* 结束状态回到原始位置 */
+    }
+}
+
+/* 响应式设计：当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 20px; /* 导航栏内边距，上下20像素，左右20像素，增加导航栏的高度和宽度 */
+    }
+
+    .navbar-links {
+        display: none; /* 隐藏导航链接 */
+        position: absolute; /* 绝对定位导航链接 */
+        top: calc(100% - 1px); /* 导航链接距离页面顶部100%，位于导航栏下方，覆盖白色线条 */
+        left: 0; /* 导航链接距离页面左边0像素 */
+        width: 100%; /* 导航链接宽度为100% */
+        background-color: #333; /* 导航链接背景颜色为深灰色 */
+        flex-direction: column; /* 使用flex布局，使链接垂直排列 */
+        gap: 30px; /* 链接之间的间距为30像素 */
+        padding: 20px; /* 导航链接内边距为20像素 */
+    }
+
+    .navbar-links.open {
+        display: flex; /* 显示导航链接 */
+        animation: dropdownAnimation 0.5s ease forwards; /* 应用下拉动画 */
+    }
+
+    .navbar-links a {
+        color: white; /* 链接颜色为白色 */
+        opacity: 0; /* 初始状态透明度为0 */
+        animation: dropdownAnimation 0.5s ease forwards; /* 应用下拉动画 */
+        animation-delay: 0.1s; /* 每个链接的动画延迟，逐渐显示 */
+    }
+
+    .navbar-links.open a:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+
+    .navbar-links.open a:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .navbar-links.open a:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+
+    .navbar-links.open a:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+
+    .navbar-links.open a:nth-child(5) {
+        animation-delay: 0.25s;
+    }
+
+    .menu-icon {
+        display: flex; /* 显示菜单图标 */
+    }
+}

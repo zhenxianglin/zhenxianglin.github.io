@@ -1,0 +1,46 @@
+/* 全局样式 */
+body {
+    padding-top: 80px; /* 为body添加80像素的上内边距，确保导航栏不遮挡页面内容 */
+    margin: 0; /* 移除默认外边距 */
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+}
+
+.section {
+    opacity: 0; /* 初始状态透明度为0 */
+    transform: translateY(20px); /* 初始状态向下偏移20像素 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加过渡效果 */
+}
+
+.section.visible {
+    opacity: 1; /* 进入视口时透明度变为1 */
+    transform: translateY(0); /* 进入视口时回到原始位置 */
+}
+
+.divider {
+    width: 100%; /* 分割线宽度为100% */
+    border: none; /* 去掉默认边框样式 */
+    border-top: 1px solid #ddd; /* 添加顶部边框 */
+    margin: 20px 0; /* 上下边距40像素 */
+}
+
+.footer {
+    padding: 10px 0px; /* 内边距 */
+    background-color: white; /* 背景颜色 */
+    color: #878686; /* 文字颜色 */
+    border-top: 1px solid #ddd; /* 顶部边框 */
+    width: 100%; /* 宽度为100% */
+    box-sizing: border-box; /* 包含内边距和边框宽度在元素的总宽度内 */
+    text-align: left; /* 文本左对齐 */
+}
+
+.footer p {
+    margin-left: 100px; /* 左侧内边距，与其他部分对齐 */
+}
+
+/* 响应式设计：当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    .footer p {
+        margin-left: 0; /* 移除左侧内边距 */
+        text-align: center; /* 文本居中对齐 */
+    }
+}

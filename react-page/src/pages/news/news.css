@@ -1,0 +1,34 @@
+.news-container {
+    padding: 20px 50px 50px 100px; /* 添加内边距，上20像素 右50像素 下50像素，左100像素 */
+}
+
+.news-list {
+    list-style-type: disc; /* 列表项样式 */
+    padding-left: 20px; /* 左侧内边距 */
+}
+
+.news-list li {
+    font-size: 16px; /* 列表项字体大小 */
+    line-height: 1.5; /* 行高 */
+    margin-bottom: 10px; /* 列表项底部边距 */
+}
+
+.news-date {
+    font-weight: bold; /* 日期加粗 */
+}
+
+.news-list a {
+    color: #1a73e8; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.news-list a:hover {
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+/* 响应式设计：当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    .news-container {
+        padding: 20px; /* 减少内边距 */
+    }
+}

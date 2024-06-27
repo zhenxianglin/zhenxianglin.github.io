@@ -1,0 +1,55 @@
+.work-container {
+    padding: 50px 100px; /* 添加内边距，上下50像素，左右100像素 */
+}
+
+.work-content {
+    margin-bottom: 40px; /* 项目项底部边距 */
+}
+
+.work-header {
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 内容两端对齐 */
+    align-items: flex-start; /* 顶部对齐 */
+}
+
+.work-title {
+    font-size: 18px; /* 标题字体大小 */
+}
+
+.work-timeline {
+    font-size: 16px; /* 时间轴字体大小 */
+    font-weight: bold; /* 时间轴字体加粗 */
+}
+
+.work-body {
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直排列 */
+    margin-top: 10px; /* 顶部边距 */
+}
+
+.work-details {
+    font-size: 16px; /* 细节字体大小 */
+    line-height: 1.5; /* 行高 */
+    list-style-type: disc; /* 列表项样式 */
+    margin: 0; /* 去除默认外边距 */
+    padding-left: 20px; /* 左侧内边距 */
+}
+
+.work-details li {
+    margin-bottom: 5px; /* 列表项底部边距 */
+}
+
+/* 响应式设计：当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    .work-container {
+        padding: 20px; /* 减少内边距 */
+    }
+
+    .work-header {
+        flex-direction: column; /* 改为垂直排列 */
+    }
+
+    .work-timeline {
+        margin-bottom: 10px; /* 添加底部边距 */
+    }
+}
